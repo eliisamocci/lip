@@ -1,8 +1,32 @@
-let lang1 _ = failwith ""
+type word = char list
 
-let lang2 _ = failwith ""
+let rec lang1 l = 
+  match l with 
+  [] -> false 
+  |['1'] -> true
+  |['0'] -> true
+  |'0' :: tl -> lang1 tl
+  |'1' :: tl -> lang1 tl
+  |_ -> false;;
 
-let lang3 _ = failwith ""
+
+
+let rec lang2 l =
+  match l with 
+  [] -> true 
+  |['0'] -> true 
+  |['1'] -> true
+  |'0' :: tl -> lang2 tl 
+  |'1' :: tl -> lang2 tl
+
+let rec lang3 l = 
+  match l with 
+  [] -> true 
+  |['0'] -> true 
+  |['1'] -> false
+  |'0' :: '0' :: '1' :: tl -> lang3 tl 
+  |'1' :: '0' :: '1' :: tl -> lang3 tl
+  |_ -> false;;
 
 let lang4 _ = failwith ""
 
