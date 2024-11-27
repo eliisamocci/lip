@@ -1,5 +1,6 @@
-open ArithexprLib.Ast
+(* open ArithexprLib.Ast *)
 open ArithexprLib.Main
+open ArithexprLib.Ast
 
 
 (**********************************************************************
@@ -18,9 +19,9 @@ let%test "test_bigstep2" = test_bigstep "if true then false else false or true" 
 
 let%test "test_bigstep3" = test_bigstep "succ 0" (Some (Nat 1))
 
-let%test "test_bigstep4" = test_bigstep "succ succ succ pred pred succ succ pred succ pred succ 0" (Some (Nat 3))
+ let%test "test_bigstep4" = test_bigstep "succ succ succ pred pred succ succ pred succ pred succ 0" (Some (Nat 3))
 
-let%test "test_bigstep5" = test_bigstep "iszero pred succ 0" (Some (Bool true))
+ let%test "test_bigstep5" = test_bigstep "iszero pred succ 0" (Some (Bool true))
 
 let%test "test_bigstep6" = test_bigstep "iszero pred succ 0 and not iszero succ pred succ 0" (Some (Bool true))
 
