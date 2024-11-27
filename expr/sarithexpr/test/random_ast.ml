@@ -1,4 +1,4 @@
-open SarithexprLib.Ast
+(*open SarithexprLib.Ast
 
 let expr_of_bool b = if b then True else False
 
@@ -16,5 +16,5 @@ let enot e = Not e
 let eiszero e = IsZero e
 let eand a b = And (a,b)
 let eor a b = Or (a,b)
-let eif a b c = If (a,b,c)
+let eif a b c = If (a,b,c)*)
  
